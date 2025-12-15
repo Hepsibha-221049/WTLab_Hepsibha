@@ -1,0 +1,30 @@
+<input id="text" placeholder="enter your email">
+<button onclick="checkEmail()">Check</button>
+<p id="para"></p>
+<input id="phone" placeholder="enter your phone number">
+<button onclick="checkPhone()">Check</button>
+<p id="para1"></p>
+<script>
+    function checkEmail() {
+        const email=document.getElementById("text").value;
+        const regex=/^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+        if(regex.test(email)){
+        document.getElementById("para").innerText="Valid email address";
+    }
+    else{
+        document.getElementById("para").innerText="Invalid email address";
+    }
+}
+function checkPhone() {
+    const phone=document.getElementById("phone").value;
+    const regex=/^[0-9]{10}$/;
+    if(regex.test(phone)){
+    document.getElementById("para1").innerText="Valid phone number";
+}
+else{
+    document.getElementById("para1").innerText="Invalid phone number";
+}
+}
+
+</script>
+
